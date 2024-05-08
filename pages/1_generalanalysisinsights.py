@@ -73,13 +73,3 @@ Countries, Year = st.columns(2)
 
 st.bar_chart(df1_new['TIME'])
 st.bar_chart(df1_new['Year'])
-#st.bar_chart(df1_subset)
-# Bar plot showing waste values for specific countries
-#plt.figure(figsize=(12, 8))
-#sns.barplot(x='Value', y='Countries', data=df1_subset.melt(id_vars='TIME', var_name='Year', value_name='Value'),
-#estimator='mean', ci=None, hue='Countries', palette='viridis')
-#plt.title('Country Comparison: Average Total Waste Values')
-#plt.xlabel('Average Total waste value in tonnes')
-#plt.ylabel('Countries')
-#plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-#plt.show()
