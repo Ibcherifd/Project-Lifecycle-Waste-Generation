@@ -21,3 +21,30 @@ st.title("Waste Management Insights and Recommendations on Society")
 st.write("For Society analysis, I used soil, public health and discarded vehicles each contributing signiﬁcantly to Society. Soil: If the soil quality is poor in the country with the highest value, this can have several impacts on society: Bad soil can lead to environmental issues like erosion and loss of biodiversity. The economy can suﬀer if agriculture is a big part of it and the soil quality is low, leading to higher food prices and imports. Improving soil quality is important for the health and wealth of a country's society and environment. I found out that for discarded vehicles,France has the highest value.France is a country that has a high population When a country has a lot of discarded vehicles, it can lead to pollution and take up space that could be used for something else. If there are a lot of people in that country, these problems can get worse because there are more cars to get rid of, and the pollution can affect more people. It's important for countries to find good ways to deal with old cars so they don't harm the environment or people's health.")
 st.title("Waste Management Insights and Recommendations on Carbon Intensity")
 st.write("For the Carbon Intensity, i choose Waste Incineration, Disposal of Plastic waste and Landfill. And tried to study some interesting insights. Which countries produce more waste in different categories. For Disposal of Plastic i found that the UK and Germany are the main countries in this category, followed by Spain and France, this can lead to the production of toxic gases. In the Landfill waste, Germany and Turkey are leading in this category for one of the countries that produce landfill waste, followed by Netherlands which in the last years has increase the waste in Landfill. This has several consequences like it can release toxins and create leachate that pollutes land, ground, and water. Landfill also releases the greenhouse gas methane. These problems with landfill can all have negative effects on the local environment and the health of people and wildlife who live in the nearby area. For Waste Incineration, i found that the leading countries are Estonia and Germany, this can lead to creates and/or releases harmful chemicals and pollutants, including: Air pollutants such as particulate matter, which cause lung and heart diseases. So, the recommendations i made, are to implement a waste minimisation programme, reuse and recycle materials in house. Redesign processes to reduce or eliminate waste production, and finally implementing gas cleaning systems that helps to remove pollut from emissions, reducing air pollution and utilising waste to generate electricity or heat buildings maximises efficiency.")
+
+
+#Feedback form
+def main():
+    st.title('Feedback Form')
+
+    # Add feedback questions
+    st.write('Please provide your feedback:')
+    app_feedback = st.text_area('How did you find the app?')
+    app_usefulness = st.radio('Was it useful?', options=['Yes', 'No'])
+    app_recommendation = st.radio('Would you recommend it to someone in the future?', options=['Yes', 'No'])
+
+    # Submit feedback
+    if st.button('Submit Feedback'):
+        # Save feedback to file or database
+        save_feedback(app_feedback, app_usefulness, app_recommendation)
+        st.write('Thank you for your feedback!')
+
+def save_feedback(feedback, usefulness, recommendation):
+    # Write feedback to file or database
+    # For demonstration, we'll just print the feedback
+    print('Feedback:', feedback)
+    print('Usefulness:', usefulness)
+    print('Recommendation:', recommendation)
+
+if __name__ == '__main__':
+    main()
